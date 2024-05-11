@@ -16,20 +16,6 @@
     chosen { zmk,matrix_transform = &five_column_transform; };
 
   behaviors {
-    /*
-    * td_lock groups locking functions into one key:
-    *  - tap once to lock the host
-    *  - tap twice to put the host to sleep
-    */
-
-    td_lock: tap_dance_lock {
-      compatible = "zmk,behavior-tap-dance";
-      label = "TAP_DANCE_LOCK";
-      #binding-cells = <0>;
-      tapping-term-ms = <TAPPING_TERM>;
-      bindings = <&kp LG(LC(Q))>, <&kp LG(LA(C_EJECT))>;
-    };
-
         hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS";
@@ -462,72 +448,14 @@
             #binding-cells = <0>;
             mods = <(MOD_LALT|MOD_RALT)>;
         };
-        vim_I: vim_I {
-            compatible = "zmk,behavior-macro";
-            label = "VIM_I";
+
+        switch_layout: switch_layout {
+            compatible = "zmk,behavior-tap-dance";
+            label = "SWITCH_LAYOUT";
             #binding-cells = <0>;
-            bindings = <&kp LG(LEFT_ARROW) &to 0>;
+            bindings = <&to 1>, <&to 0>;
         };
-
-
-        vim_word: vim_word {
-            compatible = "zmk,behavior-macro";
-            label = "VIM_WORD";
-            #binding-cells = <0>;
-            bindings = <&kp LA(RIGHT) &kp LA(RIGHT) &kp LA(LEFT)>;
-        };
-        next_line_enter: next_line_enter {
-            compatible = "zmk,behavior-macro";
-            label = "NEXT_LINE_ENTER";
-            #binding-cells = <0>;
-            bindings = <&kp LG(RIGHT) &kp ENTER>;
-        };
-
-        previous_line_enter: previous_line_enter {
-            compatible = "zmk,behavior-macro";
-            label = "PREVIOUS_LINE_ENTER";
-            #binding-cells = <0>;
-            bindings = <&kp LG(LEFT) &kp LS(ENTER) &kp LEFT>;
-        };
-
-
-        thic_arrow: thic_arrow {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp EQUAL &kp GT>;
-            label = "THIC_ARROW";
-        };
-
-        thin_arrow: thin_arrow {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp MINUS &kp GT>;
-            label = "THIN_ARROW";
-        };
-
-        agrave: agrave {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&always_grave &kp A>;
-            label = "AGRAVE";
-        };
-
-        gte: gte {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp GT &kp EQUAL>;
-            label = "GTE";
-        };
-
-        lte: lte {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LT &kp EQUAL>;
-            label = "LTE";
-        };
-
-
-  };
+    };
 
   combos {
     compatible = "zmk,combos";
@@ -581,6 +509,83 @@
       bindings = <&kp G &kp I &kp T &kp SPACE &kp C &kp O &kp M &kp M &kp I &kp T &kp SPACE &kp MINUS &kp A &kp MINUS &kp M &kp SPACE &kp DQT &kp DQT &kp LEFT_ARROW>;
       label = "GIT_COMMIT";
     };
+
+        vim_word: vim_word {
+            compatible = "zmk,behavior-macro";
+            label = "VIM_WORD";
+            #binding-cells = <0>;
+            bindings = <&kp LA(RIGHT) &kp LA(RIGHT) &kp LA(LEFT)>;
+        };
+
+        previous_line_enter: previous_line_enter {
+            compatible = "zmk,behavior-macro";
+            label = "PREVIOUS_LINE_ENTER";
+            #binding-cells = <0>;
+            bindings = <&kp LG(LEFT) &kp LS(ENTER) &kp LEFT>;
+        };
+
+        vim_I: vim_I {
+            compatible = "zmk,behavior-macro";
+            label = "VIM_I";
+            #binding-cells = <0>;
+            bindings = <&kp LG(LEFT_ARROW) &to 0>;
+        };
+
+        aes: aes {
+            compatible = "zmk,behavior-macro";
+            label = "AES";
+            #binding-cells = <0>;
+            bindings = <&always_tilde &kp A &kp E &kp S>;
+        };
+
+        esc_0: esc_0 {
+            compatible = "zmk,behavior-macro";
+            label = "ESC_0";
+            #binding-cells = <0>;
+            bindings = <&to 0 &kp ESCAPE>;
+        };
+
+        next_line_enter: next_line_enter {
+            compatible = "zmk,behavior-macro";
+            label = "NEXT_LINE_ENTER";
+            #binding-cells = <0>;
+            bindings = <&kp LG(RIGHT) &kp ENTER>;
+        };
+
+        thic_arrow: thic_arrow {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp EQUAL &kp GT>;
+            label = "THIC_ARROW";
+        };
+
+        thin_arrow: thin_arrow {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp MINUS &kp GT>;
+            label = "THIN_ARROW";
+        };
+
+        agrave: agrave {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&always_grave &kp A>;
+            label = "AGRAVE";
+        };
+
+        gte: gte {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp GT &kp EQUAL>;
+            label = "GTE";
+        };
+
+        lte: lte {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LT &kp EQUAL>;
+            label = "LTE";
+        };
   };
 
   keymap {

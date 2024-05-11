@@ -33,8 +33,8 @@ layers:
   - {t: /, s: \}
   - {t: '[', h: MEDIA_L}
   - {t: TAB, h: LEFT GUI}
-  - {t: SPACE, h: VIM}
   - {t: BACKSPACE, h: VIM}
+  - {t: SPACE, h: VIM}
   - {t: ENTER, h: numpad_sym}
   - {t: ']', h: FN_R}
   DVORAK:

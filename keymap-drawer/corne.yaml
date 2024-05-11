@@ -260,12 +260,11 @@ layers:
   - {t: ▽, type: trans}
   - {t: Gui+ RIGHT, s: END}
   FN_R:
-  - {t: ▽, type: trans}
   - BT CLR ALL
   - {t: BT, h: '4'}
   - {t: BT, h: '3'}
-  - {t: BT, h: '2', type: held}
-  - {t: ▽, type: trans}
+  - {t: BT, h: '2'}
+  - {type: held}
   - '&sys_reset'
   - F7
   - F8

@@ -462,6 +462,13 @@
             #binding-cells = <0>;
             mods = <(MOD_LALT|MOD_RALT)>;
         };
+        vim_I: vim_I {
+            compatible = "zmk,behavior-macro";
+            label = "VIM_I";
+            #binding-cells = <0>;
+            bindings = <&kp LG(LEFT_ARROW) &to 0>;
+        };
+
 
   };
 

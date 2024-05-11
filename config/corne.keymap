@@ -468,6 +468,47 @@
             #binding-cells = <0>;
             bindings = <&kp LG(LEFT_ARROW) &to 0>;
         };
+        next_line_enter: next_line_enter {
+            compatible = "zmk,behavior-macro";
+            label = "NEXT_LINE_ENTER";
+            #binding-cells = <0>;
+            bindings = <&kp LG(RIGHT) &kp ENTER>;
+        };
+
+        thic_arrow: thic_arrow {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp EQUAL &kp GT>;
+            label = "THIC_ARROW";
+        };
+
+        thin_arrow: thin_arrow {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp MINUS &kp GT>;
+            label = "THIN_ARROW";
+        };
+
+        agrave: agrave {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&always_grave &kp A>;
+            label = "AGRAVE";
+        };
+
+        gte: gte {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp GT &kp EQUAL>;
+            label = "GTE";
+        };
+
+        lte: lte {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LT &kp EQUAL>;
+            label = "LTE";
+        };
 
 
   };

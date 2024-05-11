@@ -670,7 +670,45 @@
             >;
         };
 
+        DVORAK {
+            bindings = <
+  &quote_grave  &coma_semi      &dot_colon  &p_question          &kp Y      &kp F    &lt 14 G                  &lt 11 C    &lt 12 R         &lt 13 L
+  &hm LCTRL A   &hm LEFT_ALT O  &hm LGUI E  &shift_tap LSHIFT U  &lt 5 I    &lt 5 D  &shift_tap RIGHT_SHIFT H  &hm RGUI T  &hm RIGHT_ALT N  &hm RCTRL S
+  &kp ESC       &kp Q           &kp J       &kp K                &kp X      &kp B    &kp M                     &kp W       &kp V            &kp Z
+                                &trans      &trans               &trans     &trans   &trans                    &trans
+            >;
+        };
 
+        acute {
+            bindings = <
+  &trans   &trans  &eacute  &trans  &trans    &trans  &uacute  &iacute  &oacute  &trans
+  &aacute  &trans  &trans   &trans  &trans    &trans  &trans   &trans   &trans   &trans
+  &trans   &trans  &trans   &trans  &trans    &trans  &trans   &trans   &trans   &trans
+                   &trans   &trans  &trans    &trans  &trans   &trans
+            >;
+
+            label = "acute";
+        };
+
+        circ {
+            bindings = <
+  &trans  &trans  &ecirc  &trans  &trans    &trans  &ucirc  &icirc  &ocirc  &trans
+  &acirc  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+                  &trans  &trans  &trans    &trans  &trans  &trans
+            >;
+
+            label = "circ";
+        };
+
+        tilde {
+            bindings = <
+  &trans   &trans  &trans     &trans  &trans    &trans  &trans     &trans  &oes    &trans
+  &atilde  &ao     &aes       &trans  &trans    &trans  &trans     &trans  &trans  &trans
+  &trans   &trans  &kp LA(C)  &trans  &trans    &trans  &kp TILDE  &trans  &trans  &trans
+                   &trans     &trans  &trans    &trans  &trans     &trans
+            >;
+        };
 
         numpad_sym {
             bindings = <
@@ -723,6 +761,34 @@
   &sys_reset   &kp F4  &kp F5        &kp F6        &kp F12       &trans  &trans  &trans  &trans  &trans
   &kp K_LOCK   &kp F1  &kp F2        &kp F3        &kp F12       &trans  &trans  &trans  &trans  &trans
                        &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_CLR    &trans  &trans  &trans
+            >;
+        };
+
+        dvorak_acute {
+            label = "dvorak_acute";
+            bindings = <
+  &trans   &trans   &trans   &trans   &trans     &trans  &trans  &trans  &trans  &trans
+  &aacute  &oacute  &eacute  &uacute  &iacute    &trans  &trans  &trans  &trans  &trans
+  &trans   &trans   &trans   &trans   &trans     &trans  &trans  &trans  &trans  &trans
+                    &trans   &trans   &trans     &trans  &trans  &trans
+            >;
+        };
+
+        dvorak_circ {
+            bindings = <
+  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+  &acirc  &ocirc  &ecirc  &ucirc  &icirc    &trans  &trans  &trans  &trans  &trans
+  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+                  &trans  &trans  &trans    &trans  &trans  &trans
+            >;
+        };
+
+        dvorak_tilde {
+            bindings = <
+  &trans   &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+  &atilde  &oes    &aes    &trans  &trans    &trans  &trans  &trans  &trans  &trans
+  &trans   &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+                   &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
 

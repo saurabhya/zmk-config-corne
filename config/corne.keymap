@@ -12,8 +12,8 @@
 #define DEFAULT_L 0
 
 &lt {
-    quick-tap-ms = <500>;
-    tapping-term-ms = <500>;
+    quick-tap-ms = <350>;
+    tapping-term-ms = <350>;
 };
 
 / {

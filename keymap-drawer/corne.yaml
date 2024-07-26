@@ -3,12 +3,12 @@ layers:
   default:
   - {t: Q, s: '`'}
   - {t: W, s: W}
-  - {t: E, h: circ}
-  - {t: R, h: acute}
+  - E
+  - R
   - {t: T, h: FN_R}
   - {t: Y, h: FN_L}
-  - {t: U, h: circ}
-  - {t: I, h: acute}
+  - U
+  - I
   - O
   - P
   - {t: A, h: LCTRL}
@@ -29,7 +29,7 @@ layers:
   - {t: N, h: tilde}
   - M
   - {t: ',', s: ;}
-  - {t: ., s: 'Alt+ :'}
+  - {t: ., s: ':'}
   - {t: /, s: \}
   - {t: '[', h: MEDIA_L}
   - {t: TAB, h: LEFT GUI}
@@ -40,7 +40,7 @@ layers:
   DVORAK:
   - {t: '''', s: '`'}
   - {t: ',', s: ;}
-  - {t: ., s: 'Alt+ :'}
+  - {t: ., s: ':'}
   - {t: P, s: '?'}
   - Y
   - F
@@ -78,7 +78,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - '&eacute'
-  - {type: held}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - '&uacute'
@@ -114,7 +114,7 @@ layers:
   circ:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: '&ecirc', type: held}
+  - '&ecirc'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -248,16 +248,16 @@ layers:
   - ''
   - {t: LEFT SHIFT, h: toggle}
   - Alt+ LEFT
-  - ''
-  - ''
+  - PG UP
+  - PG DN
   - ''
   - '&key_repeat'
   - ''
   - Gui+ LEFT
-  - {t: ▽, type: trans}
+  - HOME
   - {type: held}
   - {t: Alt+ BACKSPACE, s: Alt+ DELETE}
-  - {t: ▽, type: trans}
+  - END
   - {t: Gui+ RIGHT, s: END}
   FN_R:
   - BT CLR ALL
